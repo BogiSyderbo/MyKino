@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0;
+    display: inline;
+}
+
+header nav {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+header nav form {
+    display: inline;
+}
+
+header nav form input {
+    padding: 0.5em;
+}
+
+header nav form button {
+    padding: 0.5em;
+    background-color: #444;
+    color: white;
+    border: none;
+}
+
+main {
+    padding: 2em;
+}
+
+h2 {
+    margin-top: 0;
+}

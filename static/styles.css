@@ -2,49 +2,55 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
 }
 
-header {
+nav {
     background-color: #333;
-    color: white;
-    padding: 1em;
+    color: #fff;
+    padding: 10px;
 }
 
-header h1 {
-    margin: 0;
-    display: inline;
-}
-
-header nav {
-    display: inline;
-    margin-left: 20px;
-}
-
-header nav a {
-    color: white;
-    margin-right: 15px;
+nav a {
+    color: #fff;
+    margin: 0 10px;
     text-decoration: none;
 }
 
-header nav form {
-    display: inline;
+.container {
+    padding: 20px;
 }
 
-header nav form input {
-    padding: 0.5em;
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
 }
 
-header nav form button {
-    padding: 0.5em;
-    background-color: #444;
+.movie {
+    position: relative;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    border: none;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-main {
-    padding: 2em;
-}
-
-h2 {
-    margin-top: 0;
+.movie:hover .movie-title {
+    opacity: 1;
 }

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Your Watchlist</h1>
+<div class="movies">
+    {% for movie in watchlist %}
+        <div class="movie">
+            <a href="{{ url_for('movie_detail', movie_id=movie.id) }}">
+                <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+            </a>
+            <h3>{{ movie.title }}</h3>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

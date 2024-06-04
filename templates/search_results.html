@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Search Results for "{{ query }}"</h1>
+<h2>Movies</h2>
+<ul>
+    {% for movie in results.movies %}
+        <li><a href="{{ url_for('movie_detail', movie_id=movie.id) }}">{{ movie.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Directors</h2>
+<ul>
+    {% for director in results.directors %}
+        <li><a href="{{ url_for('director_movies', director_id=director.id) }}">{{ director.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Actors</h2>
+<ul>
+    {% for actor in results.actors %}
+        <li><a href="{{ url_for('actor_movies', actor_id=actor.id) }}">{{ actor.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>All Movies</h1>
 <form action="{{ url_for('home') }}" method="get" id="filter-form">
     <label for="genre">Filter by Genre:</label>
     <select name="genre" id="genre">

@@ -2,6 +2,8 @@ from flask import Flask, render_template, redirect, url_for, session, request
 from forms import SearchForm
 import psycopg2
 import psycopg2.extras
+import re  # Import the regular expression module
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
@@ -20,7 +22,13 @@ def home():
     cur.execute("SELECT DISTINCT genre FROM movies;")
     genres = [row['genre'] for row in cur.fetchall()]
 
-     # Get filter and sort parameters from the request
+    # Extract unique singular genres using regex
+    unique_genres = set()
+    for genre in genres:
+        unique_genres.update(re.findall(r'\b\w+(?:-\w+)?\b', genre))
+
+
+    # Get filter and sort parameters from the request
     filter_genre = request.args.get('genre')
     sort_by = request.args.get('sort', 'rating')  # Default to sorting by rating
     sort_order = request.args.get('order', 'desc')  # Default to descending order
@@ -40,7 +48,7 @@ def home():
 
     form = SearchForm()  # Create an instance of the SearchForm
 
-    return render_template('home.html', movies=movies, genres=genres, form=form)
+    return render_template('home.html', movies=movies, genres=unique_genres, form=form)
 
 
 @app.route('/movie/<int:movie_id>')

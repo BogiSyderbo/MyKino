@@ -64,11 +64,51 @@ nav input[type="submit"] {
     cursor: pointer;
 }
 
-/* Movie image styles */
-.movie img {
+/* Movie image styles for home page */
+.movies .movie img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Movie card styles for movie details */
+.movie-card {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.movie-image {
+    flex: 0 0 auto;
+}
+
+.movie-image img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.movie-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.movie-details h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.movie-details p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.movie-details strong {
+    color: #333;
 }
 
 /* Movie title styles */
@@ -115,4 +155,50 @@ nav input[type="submit"] {
     }
 }
 
+/* Director movie item styles */
+.director-movie {
+    display: inline-block; /* Set to inline-block */
+    margin-right: 20px; /* Add some margin between movies */
+    vertical-align: top; /* Align to the top of the line */
+    cursor: pointer;
+}
 
+/* Director movie image styles */
+.director-movie-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.director-movie-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Actor movie item styles */
+.actor-movie {
+    display: inline-block; /* Set to inline-block */
+    margin-right: 20px; /* Add some margin between movies */
+    vertical-align: top; /* Align to the top of the line */
+    cursor: pointer;
+}
+
+/* Actor movie image styles */
+.actor-movie-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.actor-movie-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

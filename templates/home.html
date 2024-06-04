@@ -2,11 +2,34 @@
 
 {% block content %}
 <h1>All Movies</h1>
+<form action="{{ url_for('home') }}" method="get" id="filter-form">
+    <label for="genre">Filter by Genre:</label>
+    <select name="genre" id="genre">
+        <option value="">All Genres</option>
+        {% for genre in genres %}
+            <option value="{{ genre }}" {% if genre == selected_genre %}selected{% endif %}>{{ genre }}</option>
+        {% endfor %}
+    </select>
+    <div class="sort-section">
+        <label for="sort_by">Sort by:</label>
+        <select name="sort_by" id="sort_by">
+            <option value="rating" {% if sort_by == 'rating' %}selected{% endif %}>Rating</option>
+            <option value="runtime" {% if sort_by == 'runtime' %}selected{% endif %}>Runtime</option>
+            <option value="release_year" {% if sort_by == 'release_year' %}selected{% endif %}>Release Year</option>
+        </select>
+        <label for="order">Order:</label>
+        <select name="order" id="order">
+            <option value="asc" {% if order == 'asc' %}selected{% endif %}>Ascending</option>
+            <option value="desc" {% if order == 'desc' %}selected{% endif %}>Descending</option>
+        </select>
+        <button type="submit">Apply</button>
+    </div>
+</form>
 <div class="movies">
     {% for movie in movies %}
         <div class="movie">
             <a href="{{ url_for('movie_detail', movie_id=movie.id) }}">
-                <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+                <img src="{{ movie.poster }}" alt="{{ movie.title }}" title="Rating: {{ movie.rating }}">
                 <div class="movie-title">{{ movie.title }}</div>
             </a>
         </div>

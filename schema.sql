@@ -1,14 +1,14 @@
 -- Table to store actors
 CREATE TABLE IF NOT EXISTS actors (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+    name VARCHAR(100) UNIQUE NOT NULL
 );
 
 
 -- Table to store directors
 CREATE TABLE IF NOT EXISTS directors (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+    name VARCHAR(100) UNIQUE NOT NULL
 );
 
 -- Table to store movies
@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS movies (
     runtime INT,
     rating FLOAT,
     poster VARCHAR(255), -- URL to the poster image
+    plot TEXT,
     director_id INTEGER REFERENCES directors(id),
     release_year INTEGER
 );

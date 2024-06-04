@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ director[0] }}</title>
+</head>
+<body>
+    <h1>{{ director[0] }}</h1>
+    <h2>Movies</h2>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <a href="{{ url_for('movie', movie_id=movie[0]) }}">
+                    <img src="{{ movie[2] }}" alt="{{ movie[1] }}" style="width:100px;height:auto;">
+                    {{ movie[1] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

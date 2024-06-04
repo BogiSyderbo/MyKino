@@ -7,7 +7,7 @@ import re
 conn = psycopg2.connect(
     dbname='mykino', 
     user='postgres', 
-    password='spil3009', 
+    password='1234', 
     host='localhost')
 
 cur = conn.cursor()

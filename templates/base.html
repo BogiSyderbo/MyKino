@@ -5,14 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyKino</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        nav a, nav form {
+            font-size: 24px;
+            flex: 1;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:first-child {
+            text-align: left;
+        }
+        nav a:last-child {
+            text-align: right;
+        }
+        nav form {
+            display: flex;
+            justify-content: center;
+        }
+        nav form input[type="text"] {
+            width: 70%;
+            font-size: 24px;
+            padding: 5px;
+        }
+        nav form input[type="submit"] {
+            font-size: 24px;
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="{{ url_for('home') }}">MyKino</a>
         <form action="{{ url_for('search') }}" method="post">
             {{ form.hidden_tag() }}
-            {{ form.search(size=20) }} <!-- Adjust the size as needed -->
-            {{ form.submit(value='Search') }}
+            {{ form.search(size=30) }}
+            {{ form.submit }}
         </form>
         <a href="{{ url_for('about') }}">About</a>
     </nav>

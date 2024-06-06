@@ -5,6 +5,8 @@ Mykino is a website running python and flask library. The application can be use
 Click on a movie poster to see information about a movie. Click links for actors or directors to see film they are involved with.
 Use the search bar to search for movies, actors or directors.
 On the home page you can filter movies by genre. Click the "Mykino" text to get back to the home page.
+
+(HTML code was created with the help of Chatgpt)
 ## Requirements:
 Run the code below to install the necessary modules.
     

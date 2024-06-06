@@ -11,15 +11,15 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 def get_db_connection():
     conn = psycopg2.connect(
     dbname='mykino', 
-    user='XXXXXX', 
-    password='XXXXXX', 
+    user='postgres', 
+    password='spil3009', 
     host='localhost')
     return conn
 
 @app.route('/')
 def home():
     conn = get_db_connection()
-    # using DictCursor to access elements using dicts instead of tuples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
+    # using DictCursor to access elements using dicts instead of tuples
 
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 

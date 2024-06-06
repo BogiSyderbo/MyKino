@@ -16,7 +16,7 @@ Run the code below to install the necessary modules.
 ```
 2. set the database username and password in load.py and app.py
 3. run schema.sql in your database
-4. run load.py using command in the dataset folder:
+4. run load.py using command:
 ```
     $ python3 load.py
 ```

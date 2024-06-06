@@ -32,20 +32,6 @@ CREATE TABLE IF NOT EXISTS movie_actors (
     PRIMARY KEY (movie_id, actor_id)
 );
 
--- Table to store users
-CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL
-);
-
--- Table to store watchlist
-CREATE TABLE IF NOT EXISTS watchlist (
-    id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id),
-    movie_id INTEGER REFERENCES movies(id)
-);
 
 
 

@@ -3,11 +3,11 @@ import psycopg2
 from psycopg2.extras import execute_values
 import re
 
-# Connect to the PostgreSQL database
+# Connect to the PostgreSQL database -- fill in your username and password
 conn = psycopg2.connect(
     dbname='mykino', 
-    user='postgres', 
-    password='1234', 
+    user='XXXXX', 
+    password='XXXXX', 
     host='localhost')
 
 cur = conn.cursor()

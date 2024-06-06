@@ -5,15 +5,19 @@ Mykino is a website running python and flask library. The application can be use
 
 ## Requirements:
 Run the code below to install the necessary modules.
-$pip install -r requirements.txt
+    
+    $ pip install -r requirements.txt
 
 
 ## Database init
 1. set the database in load.py and app.py
 2. run schema.sql in your database
-3. run load.py using command $python3 load.py
+3. run load.py using command:
+
+    $ python3 load.py
 
 Example: 
+    
     psql -d{database} -U{user} -W -f schema.sql
 
 #### notes

@@ -13,7 +13,7 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # Load the CSV file
-df = pd.read_csv('imdb_top_1000.csv')
+df = pd.read_csv('dataset/imdb_top_1000.csv')
 
 # Prepare data
 movies_data = df[['Poster_Link', 

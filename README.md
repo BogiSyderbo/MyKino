@@ -17,12 +17,14 @@ Run the code below to install the necessary modules.
     $ python3 load.py
 ```
 Example on how to run sql files: 
-    
+```
     psql -d{database} -U{user} -W -f schema.sql
-
+```
 #### notes
 For Ubuntu add host (-h127.0.0.1) to psql: 
+```
     psql -d{database} -U{user} -h127.0.0.1 -W -f schema.sql
+```
 schema_drop.sql can be used to drop the schema.
 
 

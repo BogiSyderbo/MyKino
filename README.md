@@ -26,14 +26,3 @@ For Ubuntu add host (-h127.0.0.1) to psql:
     psql -d{database} -U{user} -h127.0.0.1 -W -f schema.sql
 ```
 schema_drop.sql can be used to drop the schema.
-
-
-## Running flask
-### The python way
-    python3 run.py
-
-### The flask way.
-    export FLASK_APP=run.py
-    export FLASK_DEBUG=1           (Replaces export FLASK_ENV=development)
-    export FLASK_RUN_PORT=5004     (Optional if you want to change port numbe4. Default port is port 5000.)
-    flask run

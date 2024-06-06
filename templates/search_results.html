@@ -4,8 +4,15 @@
 <h1>Search Results for "{{ query }}"</h1>
 <h2>Movies</h2>
 <ul>
+<div class="movies">
     {% for movie in results.movies %}
-        <li><a href="{{ url_for('movie_detail', movie_id=movie.id) }}">{{ movie.title }}</a></li>
+        <div class="director-movie">
+            <a href="{{ url_for('movie_detail', movie_id=movie.id) }}">
+                <div class="director-movie-image">
+                    <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+                </div>
+                <h3 class="movie-title">{{ movie.title }}</h3> 
+        </div>
     {% endfor %}
 </ul>
 

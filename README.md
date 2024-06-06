@@ -10,9 +10,13 @@ Run the code below to install the necessary modules.
 
 
 ## Database init
-1. set the database username and password in load.py and app.py
-2. run schema.sql in your database
-3. run load.py using command in the dataset folder:
+0. make a database using the command:
+```
+    createdb -U {user} mykino
+```
+2. set the database username and password in load.py and app.py
+3. run schema.sql in your database
+4. run load.py using command in the dataset folder:
 ```
     $ python3 load.py
 ```

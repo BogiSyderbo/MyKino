@@ -1,5 +1,5 @@
 ![](MyKino_ER_model.jpeg)
-
+**Made by Bogi Syderbø, Oliver Sørensen and William Shi**
 # MyKino
 Mykino is a website running python and flask library. The application can be used for searching and filtering for movies.
 Click on a movie poster to see information about a movie. Click links for actors or directors to see film they are involved with.

@@ -11,8 +11,8 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 def get_db_connection():
     conn = psycopg2.connect(
     dbname='mykino', 
-    user='postgres', 
-    password='spil3009', 
+    user='xxxxxx', 
+    password='xxxxxxx', 
     host='localhost')
     return conn
 
